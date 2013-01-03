@@ -1,4 +1,4 @@
-module Ember
+module Hanber
   module Generators
     module GeneratorHelpers
 

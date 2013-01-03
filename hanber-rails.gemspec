@@ -8,8 +8,8 @@ Gem::Specification.new do |gem|
   gem.version       = Hanber::Rails::VERSION
   gem.authors       = ["logical42"]
   gem.email         = ["han@thirstlabs.com"]
-  gem.description   = %q{TODO: Write a gem description}
-  gem.summary       = %q{TODO: Write a gem summary}
+  gem.description   = %q{ hacked version of ember-rails }
+  gem.summary       = %q{ customized version of ember-rails for me, han }
   gem.homepage      = ""
 
   gem.files         = `git ls-files`.split($/)

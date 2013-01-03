@@ -1,5 +1,5 @@
 module Hanber
   module Rails
-    VERSION = '0.8.1.rc1'
+    VERSION = '0.0.1'
   end
 end
