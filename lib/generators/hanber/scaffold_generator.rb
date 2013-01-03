@@ -10,11 +10,13 @@ module Hanber
       source_root File.expand_path("../../templates", __FILE__)
       
       argument :attributes, :type => :array, :default => [], :banner => "field[:type] field[:type] ..."
-      
+      class_option :skip_model, :type => :boolean, :default => false, :desc => "Generate with no model file"
       desc "Scaffold a restful resource for ember similarly to the rails scaffold generator."
 
       def create_model
-        generate("hanber:model", attributes)
+        unless skip_model
+          generate("hanber:model", "#{file_name} #{puts attributes}")
+        end
         #template 'model.js', File.join('app/assets/javascripts/models', class_path, "#{file_name}.js")
       end
       def create_resourceful_route
