@@ -37,7 +37,8 @@ module Hanber
       def create_route_handlers
         resource_hash = {show: "#{file_name}Show", index: "#{file_name.pluralize}Index", new: "#{file_name}New", edit: "#{file_name}Edit"}
         resource_hash.each do |restful_action, restful_name|
-          template('scaffolded_route.js', File.join("app/assets/javascripts/route_handlers/#{file_name}_routes", class_path, "#{restful_name.underscore}.js"),  :assigns => { :rest_action => restful_name })
+          @rest_action = restful_name
+          template('scaffolded_route.js', File.join("app/assets/javascripts/route_handlers/#{file_name}_routes", class_path, "#{restful_name.underscore}.js"))
         end
       end
     end
