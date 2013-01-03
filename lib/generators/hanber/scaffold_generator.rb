@@ -14,7 +14,7 @@ module Hanber
       desc "Scaffold a restful resource for ember similarly to the rails scaffold generator."
 
       def create_model
-        unless skip_model
+        unless options.skip_model?
           generate("hanber:model", "#{file_name} #{puts attributes}")
         end
         #template 'model.js', File.join('app/assets/javascripts/models', class_path, "#{file_name}.js")
