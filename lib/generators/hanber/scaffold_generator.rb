@@ -1,7 +1,7 @@
 require 'hanber/version'
 require 'generators/hanber/generator_helpers'
-require 'generators/hanber/model'
-require 'generators/hanber/route_handler'
+require 'generators/hanber/model_generator'
+require 'generators/hanber/route_handler_generator'
 module Hanber
   module Generators
     class ScaffoldGenerator < ::Rails::Generators::NamedBase
