@@ -1,14 +1,19 @@
 require 'hanber/version'
+require 'generators/hanber/generator_helpers'
 require 'generators/hanber/model'
+require 'generators/hanber/route_handler'
 module Hanber
   module Generators
     class ScaffoldGenerator < ::Rails::Generators::NamedBase
+      include Hanber::Generators::GeneratorHelpers
+
       source_root File.expand_path("../../templates", __FILE__)
+      
       argument :attributes, :type => :array, :default => [], :banner => "field[:type] field[:type] ..."
       desc "Scaffold a restful resource for ember similarly to the rails scaffold generator."
 
       def create_model
-        generate("ember:model", attributes)
+        generate("hanber:model", attributes)
         #template 'model.js', File.join('app/assets/javascripts/models', class_path, "#{file_name}.js")
       end
       def create_resourceful_route
