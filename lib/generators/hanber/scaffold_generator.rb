@@ -10,6 +10,7 @@ module Hanber
       source_root File.expand_path("../../templates", __FILE__)
       
       argument :attributes, :type => :array, :default => [], :banner => "field[:type] field[:type] ..."
+      
       desc "Scaffold a restful resource for ember similarly to the rails scaffold generator."
 
       def create_model

@@ -1,0 +1,1 @@
+require 'hanber_rails'
